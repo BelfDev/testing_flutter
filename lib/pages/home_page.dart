@@ -32,9 +32,18 @@ class HomePage extends StatelessWidget {
               SizedBox(height: 16.0),
               PromotionCarousel(
                 slides: [
-                  PromotionSlide(imageUrl: galleryImages[0]),
-                  PromotionSlide(imageUrl: galleryImages[1]),
-                  PromotionSlide(imageUrl: galleryImages[2]),
+                  PromotionSlide(
+                    imageUrl: galleryImages[0],
+                    text: 'Norway\n50% OFF',
+                  ),
+                  PromotionSlide(
+                    imageUrl: galleryImages[1],
+                    text: 'Canada\n33% OFF',
+                  ),
+                  PromotionSlide(
+                    imageUrl: galleryImages[2],
+                    text: 'Chile\n60% OFF',
+                  ),
                 ],
               ),
               SizedBox(height: 16.0),
