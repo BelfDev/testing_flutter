@@ -18,6 +18,7 @@ class HomePage extends StatelessWidget {
           child: Column(
             children: [
               ProductGrid(
+                nested: true,
                 images: galleryImages,
               ),
             ],

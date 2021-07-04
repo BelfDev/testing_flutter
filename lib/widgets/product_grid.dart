@@ -5,15 +5,22 @@ import 'package:testing_flutter/widgets/product_card.dart';
 class ProductGrid extends StatelessWidget {
   const ProductGrid({
     required this.images,
+    this.nested = false,
     Key? key,
   }) : super(key: key);
+
+  /// Whether this [ScrollView] is nested inside another [ScrollView].
+  ///
+  /// Defaults to `false`.
+  final bool nested;
 
   final List<String> images;
 
   @override
   Widget build(BuildContext context) {
     return StaggeredGridView.countBuilder(
-      shrinkWrap: true,
+      shrinkWrap: nested,
+      physics: nested ? NeverScrollableScrollPhysics() : null,
       padding: const EdgeInsets.symmetric(horizontal: 16.0),
       crossAxisCount: 4,
       mainAxisSpacing: 8.0,
