@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:testing_flutter/dummy_data.dart';
+import 'package:testing_flutter/utils/app_colors.dart';
 import 'package:testing_flutter/widgets/action_button.dart';
 import 'package:testing_flutter/widgets/product_grid.dart';
 import 'package:testing_flutter/widgets/promotion_carousel.dart';
@@ -13,8 +14,16 @@ class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: AppColors.navyBlue,
       appBar: AppBar(
-        title: Text('Hi, I\'m the home page'),
+        backgroundColor: AppColors.paleGreen,
+        title: Text(
+          'Packie',
+          style: TextStyle(
+            color: AppColors.white,
+            fontSize: 24.0,
+          ),
+        ),
       ),
       body: Container(
         child: SingleChildScrollView(

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:testing_flutter/utils/app_colors.dart';
 
 class ActionButton extends StatelessWidget {
   const ActionButton({
@@ -20,9 +21,15 @@ class ActionButton extends StatelessWidget {
       margin: margin,
       child: ElevatedButton(
         onPressed: onPressed,
-        child: Text(title),
+        child: Text(
+          title.toUpperCase(),
+          style: TextStyle(
+            fontWeight: FontWeight.bold,
+            fontSize: 18.0,
+          ),
+        ),
         style: ElevatedButton.styleFrom(
-          primary: Colors.lightBlue,
+          primary: AppColors.beige,
           onPrimary: Colors.black54,
           shape: const RoundedRectangleBorder(
             borderRadius: BorderRadius.all(
