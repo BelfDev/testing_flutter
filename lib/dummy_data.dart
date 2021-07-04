@@ -26,42 +26,42 @@ final products = [
   ProductModel(
     imageUrl: _images[1],
     name: 'Canada',
-    price: 300.0,
+    price: 500.0,
   ),
   ProductModel(
     imageUrl: _images[2],
     name: 'Chile',
-    price: 300.0,
+    price: 400.0,
   ),
   ProductModel(
     imageUrl: _images[3],
     name: 'Texas',
-    price: 300.0,
+    price: 250.0,
   ),
   ProductModel(
     imageUrl: _images[4],
     name: 'Finland',
-    price: 300.0,
+    price: 800.0,
   ),
   ProductModel(
     imageUrl: _images[5],
     name: 'Germany',
-    price: 300.0,
+    price: 500.0,
   ),
   ProductModel(
     imageUrl: _images[6],
     name: 'Chicago',
-    price: 300.0,
+    price: 350.0,
   ),
   ProductModel(
     imageUrl: _images[7],
     name: 'Russia',
-    price: 300.0,
+    price: 1000.0,
   ),
   ProductModel(
     imageUrl: _images[8],
     name: 'Hamburg',
-    price: 300.0,
+    price: 450.0,
   ),
 ];
 
