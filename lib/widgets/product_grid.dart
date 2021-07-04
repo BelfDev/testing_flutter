@@ -6,7 +6,7 @@ class ProductGrid extends StatelessWidget {
   const ProductGrid({
     required this.images,
     this.nested = false,
-    this.padding = const EdgeInsets.symmetric(horizontal: 16.0),
+    this.margin = const EdgeInsets.symmetric(horizontal: 16.0),
     Key? key,
   }) : super(key: key);
 
@@ -17,14 +17,15 @@ class ProductGrid extends StatelessWidget {
 
   final List<String> images;
 
-  final EdgeInsetsGeometry? padding;
+  /// Defaults to `EdgeInsets.symmetric(horizontal: 16.0)`.
+  final EdgeInsetsGeometry? margin;
 
   @override
   Widget build(BuildContext context) {
     return StaggeredGridView.countBuilder(
       shrinkWrap: nested,
       physics: nested ? NeverScrollableScrollPhysics() : null,
-      padding: padding,
+      padding: margin,
       crossAxisCount: 4,
       mainAxisSpacing: 16.0,
       crossAxisSpacing: 16.0,
