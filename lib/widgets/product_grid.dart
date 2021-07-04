@@ -26,8 +26,8 @@ class ProductGrid extends StatelessWidget {
       physics: nested ? NeverScrollableScrollPhysics() : null,
       padding: padding,
       crossAxisCount: 4,
-      mainAxisSpacing: 8.0,
-      crossAxisSpacing: 8.0,
+      mainAxisSpacing: 16.0,
+      crossAxisSpacing: 16.0,
       staggeredTileBuilder: (index) => StaggeredTile.count(
         2,
         index.isOdd ? 3 : 2,
