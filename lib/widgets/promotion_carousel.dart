@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:testing_flutter/widgets/page_indicator.dart';
 import 'package:testing_flutter/widgets/promotion_slide.dart';
 
 class PromotionCarousel extends StatefulWidget {
@@ -24,11 +25,14 @@ class PromotionCarousel extends StatefulWidget {
 
 class _PromotionCarouselState extends State<PromotionCarousel> {
   late final PageController _controller;
+  late int _activeIndex;
 
   @override
   void initState() {
     super.initState();
-    _controller = widget.pageController ?? PageController(initialPage: 0);
+    _activeIndex = 0;
+    _controller =
+        widget.pageController ?? PageController(initialPage: _activeIndex);
   }
 
   @override
@@ -44,16 +48,32 @@ class _PromotionCarouselState extends State<PromotionCarousel> {
       margin: widget.margin,
       clipBehavior: Clip.antiAlias,
       decoration: BoxDecoration(
-        color: Colors.red,
+        color: Colors.black,
         borderRadius: BorderRadius.all(
           const Radius.circular(32.0),
         ),
       ),
-      child: PageView(
-        scrollDirection: Axis.horizontal,
-        controller: _controller,
-        physics: ClampingScrollPhysics(),
-        children: widget.slides,
+      child: Stack(
+        children: [
+          PageView(
+            scrollDirection: Axis.horizontal,
+            controller: _controller,
+            physics: ClampingScrollPhysics(),
+            children: widget.slides,
+            onPageChanged: (index) {
+              setState(() {
+                _activeIndex = index;
+              });
+            },
+          ),
+          Align(
+            alignment: Alignment.bottomCenter,
+            child: PageIndicator(
+              count: widget.slides.length,
+              activeIndex: _activeIndex,
+            ),
+          ),
+        ],
       ),
     );
   }
