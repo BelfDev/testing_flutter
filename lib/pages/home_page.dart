@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:testing_flutter/dummy_data.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({
@@ -12,10 +13,40 @@ class HomePage extends StatelessWidget {
         title: Text('Hi, I\'m the home page'),
       ),
       body: Container(
-        child: Center(
-          child: Text('Hi, I\'m the home page'),
+          child: SingleChildScrollView(
+        child: Column(
+          children: [
+            GridView.builder(
+              shrinkWrap: true,
+              gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                crossAxisCount: 2,
+                childAspectRatio: 4 / 5,
+              ),
+              itemBuilder: (_, index) => Card(
+                shape: const RoundedRectangleBorder(
+                  borderRadius: BorderRadius.all(
+                    Radius.circular(
+                      20.0,
+                    ),
+                  ),
+                ),
+                child: ClipRRect(
+                  borderRadius: BorderRadius.all(
+                    Radius.circular(
+                      20.0,
+                    ),
+                  ),
+                  child: Image.network(
+                    galleryImages[index],
+                    fit: BoxFit.cover,
+                  ),
+                ),
+              ),
+              itemCount: galleryImages.length,
+            )
+          ],
         ),
-      ),
+      )),
     );
   }
 }
