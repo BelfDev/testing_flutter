@@ -18,7 +18,7 @@ class HomePage extends StatelessWidget {
       appBar: AppBar(
         backgroundColor: AppColors.paleGreen,
         title: Text(
-          'Packie',
+          'PackTrek',
           style: TextStyle(
             color: AppColors.white,
             fontSize: 24.0,
@@ -31,20 +31,7 @@ class HomePage extends StatelessWidget {
             children: [
               SizedBox(height: 16.0),
               PromotionCarousel(
-                slides: [
-                  PromotionSlide(
-                    imageUrl: galleryImages[0],
-                    text: 'Norway\n50% OFF',
-                  ),
-                  PromotionSlide(
-                    imageUrl: galleryImages[1],
-                    text: 'Canada\n33% OFF',
-                  ),
-                  PromotionSlide(
-                    imageUrl: galleryImages[2],
-                    text: 'Chile\n60% OFF',
-                  ),
-                ],
+                slides: promotionSlides.map(PromotionSlide.fromModel).toList(),
               ),
               SizedBox(height: 16.0),
               ActionButton(
@@ -54,7 +41,7 @@ class HomePage extends StatelessWidget {
               SizedBox(height: 16.0),
               ProductGrid(
                 nested: true,
-                images: galleryImages,
+                products: products,
               ),
             ],
           ),

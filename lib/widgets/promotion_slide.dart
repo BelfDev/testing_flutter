@@ -1,6 +1,7 @@
 import 'dart:ui';
 
 import 'package:flutter/material.dart';
+import 'package:testing_flutter/models/slide_model.dart';
 import 'package:testing_flutter/utils/app_colors.dart';
 
 class PromotionSlide extends StatelessWidget {
@@ -9,6 +10,11 @@ class PromotionSlide extends StatelessWidget {
     required this.text,
     Key? key,
   }) : super(key: key);
+
+  static PromotionSlide fromModel(SlideModel model) => PromotionSlide(
+        imageUrl: model.imageUrl,
+        text: model.promotionText,
+      );
 
   final String imageUrl;
   final String text;
@@ -19,8 +25,8 @@ class PromotionSlide extends StatelessWidget {
       decoration: BoxDecoration(
         image: DecorationImage(
           fit: BoxFit.cover,
-          colorFilter: new ColorFilter.mode(
-            Colors.black.withOpacity(0.3),
+          colorFilter: ColorFilter.mode(
+            Colors.black.withOpacity(0.2),
             BlendMode.srcOver,
           ),
           image: NetworkImage(

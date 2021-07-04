@@ -10,9 +10,6 @@ class App extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Testing Flutter Apps',
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
-      ),
       home: HomePage(),
     );
   }

@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
+import 'package:testing_flutter/models/product_model.dart';
 import 'package:testing_flutter/widgets/product_card.dart';
 
 class ProductGrid extends StatelessWidget {
   const ProductGrid({
-    required this.images,
+    required this.products,
     this.nested = false,
     this.margin = const EdgeInsets.symmetric(horizontal: 16.0),
     Key? key,
@@ -15,7 +16,7 @@ class ProductGrid extends StatelessWidget {
   /// Defaults to `false`.
   final bool nested;
 
-  final List<String> images;
+  final List<ProductModel> products;
 
   /// Defaults to `EdgeInsets.symmetric(horizontal: 16.0)`.
   final EdgeInsetsGeometry? margin;
@@ -33,10 +34,8 @@ class ProductGrid extends StatelessWidget {
         2,
         index.isOdd ? 3 : 2,
       ),
-      itemCount: images.length,
-      itemBuilder: (context, index) => ProductCard(
-        imageUrl: images[index],
-      ),
+      itemCount: products.length,
+      itemBuilder: (context, index) => ProductCard.fromModel(products[index]),
     );
   }
 }
