@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:testing_flutter/utils/app_colors.dart';
 
 class PageIndicator extends StatelessWidget {
   const PageIndicator({
@@ -28,8 +29,8 @@ class PageIndicator extends StatelessWidget {
           (index) => _IndicatorDot(
             size: dotSize,
             active: index == activeIndex,
-            inactiveColor: Colors.grey.shade400,
-            activeColor: Colors.black,
+            inactiveColor: AppColors.beige,
+            activeColor: AppColors.white,
             animationDuration: animationDuration,
           ),
         ),
@@ -66,7 +67,7 @@ class _IndicatorDot extends StatelessWidget {
         color: active ? activeColor : inactiveColor,
         boxShadow: [
           BoxShadow(
-            color: Colors.black45,
+            color: Colors.black54,
             blurRadius: 8.0,
             spreadRadius: 2.0,
           )

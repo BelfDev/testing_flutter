@@ -30,7 +30,7 @@ class ProductCard extends StatelessWidget {
 
     return Card(
       margin: EdgeInsets.zero,
-      clipBehavior: Clip.antiAlias,
+      clipBehavior: Clip.antiAliasWithSaveLayer,
       elevation: 0.0,
       shape: const RoundedRectangleBorder(
         borderRadius: BorderRadius.all(
