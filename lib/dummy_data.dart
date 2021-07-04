@@ -11,4 +11,5 @@ const galleryImages = [
   '$_baseImageURL/1023/$_targetResolution',
   '$_baseImageURL/103/$_targetResolution',
   '$_baseImageURL/1036/$_targetResolution',
+  '$_baseImageURL/101/$_targetResolution',
 ];
