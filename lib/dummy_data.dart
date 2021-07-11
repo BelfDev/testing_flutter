@@ -19,46 +19,55 @@ const _images = const <String>[
 
 final products = [
   ProductModel(
+    id: '1',
     imageUrl: _images[0],
     name: 'Norway',
     price: 300.0,
   ),
   ProductModel(
+    id: '2',
     imageUrl: _images[1],
     name: 'Canada',
     price: 500.0,
   ),
   ProductModel(
+    id: '3',
     imageUrl: _images[2],
     name: 'Chile',
     price: 400.0,
   ),
   ProductModel(
+    id: '4',
     imageUrl: _images[3],
     name: 'Texas',
     price: 250.0,
   ),
   ProductModel(
+    id: '5',
     imageUrl: _images[4],
     name: 'Finland',
     price: 800.0,
   ),
   ProductModel(
+    id: '6',
     imageUrl: _images[5],
     name: 'Germany',
     price: 500.0,
   ),
   ProductModel(
+    id: '7',
     imageUrl: _images[6],
     name: 'Chicago',
     price: 350.0,
   ),
   ProductModel(
+    id: '8',
     imageUrl: _images[7],
     name: 'Russia',
     price: 1000.0,
   ),
   ProductModel(
+    id: '9',
     imageUrl: _images[8],
     name: 'Hamburg',
     price: 450.0,
