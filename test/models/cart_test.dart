@@ -53,12 +53,12 @@ void main() {
       wishlist.forEach((product) => mockCart.add(product));
 
       // Then: the expected outcome
-      final expectedOutcome = <CartItem>{
+      final expectedOutcome = <CartItem>[
         CartItem(
           quantity: quantity,
           product: product,
         ),
-      };
+      ];
       final expectedTotal = quantity * productPrice;
 
       expect(mockCart.cartItems, equals(expectedOutcome));
