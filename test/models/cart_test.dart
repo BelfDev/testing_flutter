@@ -25,12 +25,12 @@ void main() {
       mockCart.add(product);
 
       // Then: the expected outcome
-      final expectedOutcome = <CartItem>{
+      final expectedOutcome = <CartItem>[
         CartItem(
           quantity: 1,
           product: product,
         ),
-      };
+      ];
 
       expect(mockCart.cartItems, equals(expectedOutcome));
       expect(mockCart.total, equals(productPrice));
